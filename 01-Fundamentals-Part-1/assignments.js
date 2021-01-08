@@ -1,6 +1,6 @@
 // LECTURE: Values and Variables
 
-// 1.Declare variables called 'country', 'continent'and 'population' and assign their values according to your own country(population in millions)
+// 1.Declare variables called 'country', 'continent 'and 'population' and assign their values according to your own country(population in millions)
 let country = 'Uruguay';
 let continent = 'South America';
 let population = 3400000;
@@ -12,5 +12,12 @@ console.log(population);
 
 // LECTURE: Data Types
 
-// 1.Declare a variable called 'isIsland' and set its value according to your country. The variable should hold a Booleanvalue. Also declare a variable'language', but don't assign it any value yet
-// 2.Log the types of 'isIsland', 'population', 'country'and 'language'to the console
+// 1.Declare a variable called 'isIsland' and set its value according to your country. The variable should hold a Booleanvalue. Also declare a variable 'language', but don't assign it any value yet
+let isIsland = false;
+let language;
+
+// 2.Log the types of 'isIsland', 'population', 'country' and 'language' to the console
+console.log(typeof Boolean); // function
+console.log(typeof population); // number
+console.log(typeof country); // string
+console.log(typeof language); // undefined
