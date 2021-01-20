@@ -33,13 +33,16 @@ const continent2 = 'South America';
 const isIsland2 = false;
 
 // 3.Try to change one of the changed variables now, and observe what happens
-isIsland2 = true; // TypeError: Assignment to constant variable.
+// isIsland2 = true; // TypeError: Assignment to constant variable.
 
 // LECTURE: Basic Operators
 
 // 1.If your country split in half, and each half would contain half the population, then how many people would live in each half?
+console.log(population / 2);
 
 // 2.Increase the populationof your country by 1 and log the result to the console
+population++;
+console.log(population);
 
 // 3.Finland has a population of 6 million. Does your country have more people than Finland?
 
