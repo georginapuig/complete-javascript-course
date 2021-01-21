@@ -3,7 +3,7 @@
 // 1.Declare variables called 'country', 'continent 'and 'population' and assign their values according to your own country(population in millions)
 let country = 'Uruguay';
 let continent = 'South America';
-let population = 3400000;
+let population = 3.4;
 
 // 2.Log their values to the console
 console.log(country);
@@ -45,7 +45,12 @@ population++;
 console.log(population);
 
 // 3.Finland has a population of 6 million. Does your country have more people than Finland?
+console.log(population < 6);
 
 // 4.The average population of a country is 33 million people. Does your country have less people than the average country?
+console.log(population < 33);
 
-// 5.Based on the variables you created, create a new variable 'description'which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'
+// 5.Based on the variables you created, create a new variable 'description 'which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'
+const description = country + ' is in ' + continent + ', and its ' + population + ' million people speak ' + language;
+
+console.log(description);
