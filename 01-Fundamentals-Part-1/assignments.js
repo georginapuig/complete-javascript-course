@@ -51,6 +51,13 @@ console.log(population < 6);
 console.log(population < 33);
 
 // 5.Based on the variables you created, create a new variable 'description 'which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'
-const description = country + ' is in ' + continent + ', and its ' + population + ' million people speak ' + language;
+const description1 = country + ' is in ' + continent + ', and its ' + population + ' million people speak ' + language;
 
-console.log(description);
+console.log(description1);
+
+// LECTURE: Strings and Template Literals
+
+// 1.Recreate the 'description' variable from the last assignment, this time using the template literal syntax
+const description2 = `${country} is in ${continent}, and its ${population} ' million people speak ' ${language}`;
+
+console.log(description2);
