@@ -1,3 +1,4 @@
+////////////////////////////////
 // LECTURE: Values and Variables
 
 // 1.Declare variables called 'country', 'continent 'and 'population' and assign their values according to your own country(population in millions)
@@ -10,6 +11,7 @@ console.log(country);
 console.log(continent);
 console.log(population);
 
+//////////////////////
 // LECTURE: Data Types
 
 // 1.Declare a variable called 'isIsland' and set its value according to your country. The variable should hold a Booleanvalue. Also declare a variable 'language', but don't assign it any value yet
@@ -22,6 +24,7 @@ console.log(typeof population); // number
 console.log(typeof country); // string
 console.log(typeof language); // undefined
 
+//////////////////////////////
 // LECTURE: let, const and var
 
 // 1.Set the value of 'language' to the language spoken where you live (some countries have multiple languages, but just choose one)
@@ -35,6 +38,7 @@ const isIsland2 = false;
 // 3.Try to change one of the changed variables now, and observe what happens
 // isIsland2 = true; // TypeError: Assignment to constant variable.
 
+///////////////////////////
 // LECTURE: Basic Operators
 
 // 1.If your country split in half, and each half would contain half the population, then how many people would live in each half?
@@ -55,6 +59,7 @@ const description1 = country + ' is in ' + continent + ', and its ' + population
 
 console.log(description1);
 
+/////////////////////////////////////////
 // LECTURE: Strings and Template Literals
 
 // 1.Recreate the 'description' variable from the last assignment, this time using the template literal syntax
@@ -62,6 +67,7 @@ const description2 = `${country} is in ${continent}, and its ${population} milli
 
 console.log(description2);
 
+//////////////////////////////////////////////////
 // LECTURE: Taking Decisions: if / else Statements
 
 // 1.If your country's population is greater that 33 million, log a string like this to the console: 'Portugal's population is above average'. Otherwise, log a string like 'Portugal's population is 22 million below average' (the 22 is the average of 33 minus the country's population)
@@ -73,6 +79,7 @@ if (country > 33) {
 
 // 2.After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original
 
+////////////////////////////////////////
 // LECTURE: Type Conversion and Coercion
 
 // 1.Predict the result of these 5 operations without executing them:'9' -'5';'19' -'13' + '17';'19' -'13' + 17;'123' < 57;5 + 6 + '4' + 9 -4 -2;
