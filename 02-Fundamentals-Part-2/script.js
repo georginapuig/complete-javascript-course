@@ -21,12 +21,14 @@ function calcAverage(score1, score2, score3) {
 }
 
 function checkWinner(avgDolphins, avgKoalas) {
-  if (avgDolphins >= (avgKoalas * 2)) { 
-    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`); 
-  } else if (avgKoalas >= (avgDolphins * 2)) { 
-    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`); 
+  if (avgDolphins >= avgKoalas * 2) {
+    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgKoalas >= avgDolphins * 2) {
+    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
   } else {
-    console.log(`No team wins. Koalas: ${avgKoalas} vs. Dolphins: ${avgDolphins}`);
+    console.log(
+      `No team wins. Koalas: ${avgKoalas} vs. Dolphins: ${avgDolphins}`
+    );
   }
 }
 
@@ -47,7 +49,7 @@ Steven is still building his tip calculator, using the same rules as before: Tip
 TEST DATA: 125, 555 and 44
 */
 
-const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+const calcTip = bill => (bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2);
 
 const bills = [125, 555, 44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
@@ -66,24 +68,30 @@ const jonas = {
   friends: ['Michael', 'Peter', 'Steven'],
   hasDriversLicense: false,
 
-  calcAge: function() {
+  calcAge: function () {
     this.age = 2037 - this.birthYeah;
     return this.age;
   },
 
-  getSummary: function() {
+  getSummary: function () {
     this.license = this.hasDriversLicense ? 'a' : 'no';
     return this.license;
-  }
+  },
 };
 
 // Challenge
 // "Jonas has 3 friends, and his best friend is called Michael"
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
 
 // Challenge
 // "Jonas is a 46-year old teacher, and he has a driver's license"
-console.log(`${jonas.firstName} is a ${jonas.calcAge()}-year old ${jonas.job}, and he has ${jonas.getSummary()} driver's license`);
+console.log(
+  `${jonas.firstName} is a ${jonas.calcAge()}-year old ${
+    jonas.job
+  }, and he has ${jonas.getSummary()} driver's license`
+);
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -107,7 +115,7 @@ const mark = {
   calcBMI: function () {
     this.bmi = this.mass / this.height ** 2;
     return this.bmi;
-  }
+  },
 };
 
 const john = {
@@ -117,16 +125,20 @@ const john = {
   calcBMI: function () {
     this.bmi = this.mass / this.height ** 2;
     return this.bmi;
-  }
+  },
 };
 
 john.calcBMI();
 mark.calcBMI();
 
 if (john.bmi > mark.bmi) {
-  console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`);
+  console.log(
+    `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`
+  );
 } else if (mark.bmi > john.bmi) {
-  console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})`)
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})`
+  );
 }
 
 ///////////////////////////////////////
@@ -156,7 +168,7 @@ const tips2 = []; // 2
 const totals2 = []; // 2
 
 // 3
-const calcTip2 = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+const calcTip2 = bill => (bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2);
 
 for (let i = 0; i < bills2.length; i++) {
   tips2.push(calcTip2(bills2[i]));
@@ -170,7 +182,7 @@ function calcAverage(arr) {
   // 4.1
   let sum = 0;
 
-  for(let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
   return sum / arr.length; // 4.2
