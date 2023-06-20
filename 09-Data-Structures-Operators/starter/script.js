@@ -100,17 +100,17 @@ const [pizza, , risotto, ...otherFood] = [
 // console.log(pizza, risotto, otherFood); // Pizza Risotto [ 'Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad' ]
 
 const { sat, ...weekdays } = restaurant.openingHours;
-console.log(weekdays); // { thu: { open: 12, close: 22 }, fri: { open: 11, close: 23 } }
+// console.log(weekdays); // { thu: { open: 12, close: 22 }, fri: { open: 11, close: 23 } }
 
-const add = function (...numbers) {
-  console.log(numbers);
-};
+// const add = function (...numbers) {
+//   console.log(numbers);
+// };
 
-add(1, 2); // [ 1, 2 ]
-add(3, 4, 5, 6); // [ 3, 4, 5, 6 ]
+// add(1, 2); // [ 1, 2 ]
+// add(3, 4, 5, 6); // [ 3, 4, 5, 6 ]
 
-const x = [23, 5, 7];
-add(...x); // [23, 5, 7]
+// const x = [23, 5, 7];
+// add(...x); // [23, 5, 7]
 
 // short circuiting (&& y ||)
 
@@ -122,7 +122,7 @@ add(...x); // [23, 5, 7]
 
 restaurant.numGuests = 0;
 const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-console.log(guests1); // 10
+// console.log(guests1); // 10
 
 const guests2 = restaurant.numGuests || 10;
 // console.log(guests2); // 10
@@ -137,3 +137,24 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+// Nullish: null and undefined (NOT 0 or '')
+
+restaurant.numGuests = 0;
+
+const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect); // 0
+
+//  logical operators
+
+const rest1 = { name: 'Capri', numOfGuests: 0 };
+
+// long way
+rest1.numOfGuests = rest1.numOfGuests || 10;
+
+// short way
+rest1.numOfGuests ||= 10;
+rest1.numOfGuests ??= 10;
+rest1.numOfGuests &&= 10;
+
+console.log(rest1.numOfGuests)
