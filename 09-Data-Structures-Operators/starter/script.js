@@ -1,7 +1,5 @@
 'use strict';
 
-// destructuring objects
-
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -24,6 +22,8 @@ const restaurant = {
     },
   },
 };
+
+// destructuring objects
 
 // const { name, openingHours, categories } = restaurant;
 // console.log(name, openingHours, categories);
@@ -99,8 +99,8 @@ const [pizza, , risotto, ...otherFood] = [
 ];
 // console.log(pizza, risotto, otherFood); // Pizza Risotto [ 'Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad' ]
 
-const {sat, ...weekdays} = restaurant.openingHours;
-console.log(weekdays) // { thu: { open: 12, close: 22 }, fri: { open: 11, close: 23 } }
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays); // { thu: { open: 12, close: 22 }, fri: { open: 11, close: 23 } }
 
 const add = function (...numbers) {
   console.log(numbers);
@@ -108,3 +108,32 @@ const add = function (...numbers) {
 
 add(1, 2); // [ 1, 2 ]
 add(3, 4, 5, 6); // [ 3, 4, 5, 6 ]
+
+const x = [23, 5, 7];
+add(...x); // [23, 5, 7]
+
+// short circuiting (&& y ||)
+
+// console.log(3 || 'Lola'); // 3
+// console.log('' || 'Lola'); // 'Lola'
+// console.log(true || 0); // true
+// console.log(undefined || null); // null
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null); // 'Hello'
+
+restaurant.numGuests = 0;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1); // 10
+
+const guests2 = restaurant.numGuests || 10;
+// console.log(guests2); // 10
+
+// console.log(0 && 'Jonas'); // 0
+// console.log(7 && 'Jonas'); // 'Jonas'
+
+// console.log('Hello' && 23 && null && 'jonas'); // null
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
