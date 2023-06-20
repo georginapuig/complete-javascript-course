@@ -76,7 +76,7 @@ const restaurant = {
 //   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 // };
 
-const menu = [...restaurant.mainMenu, 'Burguer'];
+// const menu = [...restaurant.mainMenu, 'Burguer'];
 // console.log(menu); // [ 'Pizza', 'Pasta', 'Risotto', 'Burguer' ]
 
 const name = 'August';
@@ -157,4 +157,28 @@ rest1.numOfGuests ||= 10;
 rest1.numOfGuests ??= 10;
 rest1.numOfGuests &&= 10;
 
-console.log(rest1.numOfGuests)
+// console.log(rest1.numOfGuests)
+
+// looping arrays (for of)
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+// get element
+for (const item of menu) {
+  console.log(item); // Focaccia Bruschetta Garlic Bread Caprese Salad Pizza Pasta Risotto
+}
+
+// get index
+for (const item of menu.entries()) {
+  console.log(item) // [ 0, 'Focaccia' ] [ 1, 'Bruschetta' ] [ 2, 'Garlic Bread' ] [ 3, 'Caprese Salad' ] [ 4, 'Pizza' ] [ 5, 'Pasta' ] [ 6, 'Risotto' ]
+}
+
+// wo destructuring
+for (const item of menu.entries()) {
+  console.log(item[0], item[1]);
+}
+
+// with destructuring
+for (const [index, element] of menu.entries()) {
+  console.log(index, element);
+}
