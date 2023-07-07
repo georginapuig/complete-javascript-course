@@ -31,16 +31,16 @@ const restaurant = {
     );
   },
 
-  orderPasta(ing1, ing2, ing3) {
-    console.log(
-      `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
-    );
-  },
+  // orderPasta(ing1, ing2, ing3) {
+  //   console.log(
+  //     `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
+  //   );
+  // },
 
-  orderPizza(mainIngredient, ...otherIngredients) {
-    console.log(mainIngredient);
-    console.log(otherIngredients);
-  },
+  // orderPizza(mainIngredient, ...otherIngredients) {
+  //   console.log(mainIngredient);
+  //   console.log(otherIngredients);
+  // },
 };
 
 // destructuring objects
@@ -246,8 +246,26 @@ const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
 // const users = [];
 
 // with
-console.log(users[0]?.name ?? 'User array empty');
+// console.log(users[0]?.name ?? 'User array empty');
 
 // wo
 // if (users.length > 0) console.log(users[0].name);
 // else console.log('user array empty');
+
+const openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
+const properties = Object.keys(openingHours);
+console.log(properties); // [ 'thu', 'fri', 'sat' ]
