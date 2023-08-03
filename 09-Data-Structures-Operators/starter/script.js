@@ -268,4 +268,17 @@ const openingHours = {
 };
 
 const properties = Object.keys(openingHours);
-console.log(properties); // [ 'thu', 'fri', 'sat' ]
+// console.log(properties); // [ 'thu', 'fri', 'sat' ]
+
+const values = Object.values(openingHours);
+// console.log(values); // [ { open: 12, close: 22 }, { open: 11, close: 23 }, { open: 0, close: 24 }]
+
+const entries = Object.entries(openingHours);
+
+for (const [key, value] of entries) {
+  console.log(key, value); // thu { open: 12, close: 22 } fri { open: 11, close: 23 } ...
+}
+
+for (const [key, { open, close }] of entries) {
+  console.log(key, open, close); // thu 12 22 fri 11 23 ...
+}
