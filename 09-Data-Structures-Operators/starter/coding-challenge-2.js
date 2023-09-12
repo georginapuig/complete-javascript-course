@@ -63,11 +63,19 @@ const game = {
 };
 
 // 1.
-for (const [item, name] of  game.scored.entries()) {
-  console.log(`Goal ${item}: ${name}`)
-}
+// for (const [item, name] of  game.scored.entries()) {
+//   console.log(`Goal ${item}: ${name}`)
+// }
 
 // 2.
-// for (const odd of game) {
+// const odds = Object.values(game.odds)
+// const avgOdd = odds.reduce((a, b) => (a + b) / odds.length)
+// console.log(avgOdd)
 
-// }
+let average = 0
+const odds = Object.values(game.odds)
+
+for (const odd of odds) {
+  average += odd
+}
+average /=  odds.length
