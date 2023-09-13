@@ -81,11 +81,20 @@ const game = {
 // average /=  odds.length
 
 // 3.
-const obj = Object.entries(game.odds)
+// const obj = Object.entries(game.odds)
 
-for (const [key, value] of obj) {
-  const teamStr = key === 'x' ? 'draw' : `victory ${game[key]}`
+// for (const [key, value] of obj) {
+//   const teamStr = key === 'x' ? 'draw' : `victory ${game[key]}`
 
-  console.log(`Odd of ${teamStr}: ${value}`)
-  // console.log(game[key] !== undefined ? `Odd of victory ${game[key]}: ${value}` : `Odd of draw: ${value}`)
+//   console.log(`Odd of ${teamStr}: ${value}`)
+//   // console.log(game[key] !== undefined ? `Odd of victory ${game[key]}: ${value}` : `Odd of draw: ${value}`)
+// }
+
+// bonus
+const scorers = {}
+const goals = [1, 1, 2]
+
+for (const player of  game.scored) {
+  scorers[player] ? scorers[player]++ : (scorers[player] = 1)
 }
+console.log(scorers)
