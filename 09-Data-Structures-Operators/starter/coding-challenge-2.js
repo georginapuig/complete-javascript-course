@@ -72,10 +72,20 @@ const game = {
 // const avgOdd = odds.reduce((a, b) => (a + b) / odds.length)
 // console.log(avgOdd)
 
-let average = 0
-const odds = Object.values(game.odds)
+// let average = 0
+// const odds = Object.values(game.odds)
 
-for (const odd of odds) {
-  average += odd
+// for (const odd of odds) {
+//   average += odd
+// }
+// average /=  odds.length
+
+// 3.
+const obj = Object.entries(game.odds)
+
+for (const [key, value] of obj) {
+  const teamStr = key === 'x' ? 'draw' : `victory ${game[key]}`
+
+  console.log(`Odd of ${teamStr}: ${value}`)
+  // console.log(game[key] !== undefined ? `Odd of victory ${game[key]}: ${value}` : `Odd of draw: ${value}`)
 }
-average /=  odds.length
