@@ -91,10 +91,10 @@ const game = {
 // }
 
 // bonus
-const scorers = {}
-const goals = [1, 1, 2]
+// const scorers = {}
+// const goals = [1, 1, 2]
 
-for (const player of  game.scored) {
-  scorers[player] ? scorers[player]++ : (scorers[player] = 1)
-}
-console.log(scorers)
+// for (const player of  game.scored) {
+//   scorers[player] ? scorers[player]++ : (scorers[player] = 1)
+// }
+// console.log(scorers)

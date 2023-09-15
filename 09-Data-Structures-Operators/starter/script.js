@@ -275,10 +275,25 @@ const values = Object.values(openingHours);
 
 const entries = Object.entries(openingHours);
 
-for (const [key, value] of entries) {
-  console.log(key, value); // thu { open: 12, close: 22 } fri { open: 11, close: 23 } ...
-}
+// for (const [key, value] of entries) {
+//   console.log(key, value); // thu { open: 12, close: 22 } fri { open: 11, close: 23 } ...
+// }
 
-for (const [key, { open, close }] of entries) {
-  console.log(key, open, close); // thu 12 22 fri 11 23 ...
-}
+// for (const [key, { open, close }] of entries) {
+//   console.log(key, open, close); // thu 12 22 fri 11 23 ...
+// }
+
+const ordersSet = new Set(['pasta', 'pizza', 'pizza', 'risotto'])
+
+// console.log(ordersSet) // Set(3) { 'pasta', 'pizza', 'risotto' }
+// console.log(ordersSet.size) // 3
+// console.log(ordersSet.has('bread')) // false
+// console.log(ordersSet.add('garlic bread')) // Set(4) { 'pasta', 'pizza', 'risotto', 'garlic bread' }
+// console.log(ordersSet.delete('pasta')) // true
+// console.log(ordersSet.clear())
+// console.log(ordersSet[2]) // undefined
+
+// new arr from set
+const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter']
+const staffUnique = [...new Set(staff)]
+console.log(staffUnique) // [ 'waiter', 'chef', 'manager' ]
