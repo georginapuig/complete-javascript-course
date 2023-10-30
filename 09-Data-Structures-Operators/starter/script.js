@@ -296,4 +296,56 @@ const ordersSet = new Set(['pasta', 'pizza', 'pizza', 'risotto'])
 // new arr from set
 const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter']
 const staffUnique = [...new Set(staff)]
-console.log(staffUnique) // [ 'waiter', 'chef', 'manager' ]
+// console.log(staffUnique) // [ 'waiter', 'chef', 'manager' ]
+
+// const rest = new Map()
+// rest.set('name', 'Classico Italiano') // set, updates map and returns it
+// rest.set('1', 'Italy')
+
+// console.log(rest.set(2, 'Portugal'))
+// Map(3) {
+//   'name' => 'Classico Italiano',
+//   '1' => 'Italy',
+//   2 => 'Portugal'
+// }
+
+const map = new Map([[1, "uno"], [2, "dos"], [3, "tres"]]);   // Map({ 1=>"uno", 2=>"dos", 3=>"tres" })
+
+// console.log(map)
+// console.log(map.set('4', 'cuatro')) // Map(4) { 1 => 'uno', 2 => 'dos', 3 => 'tres', '4' => 'cuatro' }
+// console.log(map.get('1')) // Italy
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct 🎉'],
+  [false, 'Try again!'],
+]);
+console.log(question);
+
+// convert object to map
+// console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+// console.log(hoursMap);
+
+// console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+
+// const answer = Number(prompt('Your answer'));
+const answer = 2;
+console.log(answer);
+
+// option 1
+// if (question.get('correct') === answer) {
+//   console.log(`${question.get(true)}`);
+// } else {
+//   console.log(`${question.get(false)}`);
+// }
+
+// option 2
+console.log(question.get(question.get('correct') === answer))
