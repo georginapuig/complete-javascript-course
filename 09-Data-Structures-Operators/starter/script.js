@@ -26,9 +26,9 @@ const restaurant = {
   },
 
   orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
-    console.log(
-      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
-    );
+    // console.log(
+    //   `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    // );
   },
 
   // orderPasta(ing1, ing2, ing3) {
@@ -99,8 +99,8 @@ const restaurant = {
 // const menu = [...restaurant.mainMenu, 'Burguer'];
 // console.log(menu); // [ 'Pizza', 'Pasta', 'Risotto', 'Burguer' ]
 
-const name = 'August';
-const letters = [...name, 'o'];
+// const name = 'August';
+// const letters = [...name, 'o'];
 // console.log(letters);
 
 const newRestaurant = { ...restaurant, founder: 'Ana' };
@@ -324,7 +324,7 @@ const question = new Map([
   [true, 'Correct 🎉'],
   [false, 'Try again!'],
 ]);
-console.log(question);
+// console.log(question);
 
 // convert object to map
 // console.log(Object.entries(openingHours));
@@ -333,12 +333,12 @@ const hoursMap = new Map(Object.entries(openingHours));
 
 // console.log(question.get('question'));
 for (const [key, value] of question) {
-  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+  // if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
 }
 
 // const answer = Number(prompt('Your answer'));
 const answer = 2;
-console.log(answer);
+// console.log(answer);
 
 // option 1
 // if (question.get('correct') === answer) {
@@ -348,4 +348,28 @@ console.log(answer);
 // }
 
 // option 2
-console.log(question.get(question.get('correct') === answer))
+// console.log(question.get(question.get('correct') === answer))
+
+
+class BankAccount {
+  constructor(accountNumber, accountHolder, balance = 0) {
+    this.accountNumber = accountNumber
+    this.accountHolder = accountHolder
+    this.balance = balance
+  }
+
+  deposit(amt) {
+    this.balance = this.balance + amt
+    console.log(`Deposited $${amt}. New balance $${this.balance}`)
+  }
+
+  withdraw(amt) {
+    this.balance = this.balance - amt
+    console.log(`Deposited: $${amt}. New balance: $${this.balance}`)
+  }
+}
+
+const coltAcc = new BankAccount('123', 'Colt')
+console.log(coltAcc.deposit(200))
+console.log(coltAcc.balance)
+console.log(coltAcc.withdraw(500))
